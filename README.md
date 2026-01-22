@@ -2,12 +2,15 @@
 
 Netprobe is a network topology discovery and analysis tool. It consists of an agent, a server, and a CLI.
 
+Note: This project is currently under development.
+Not all features have been implemented
+
 ## Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository_url>
-    cd netprobe
+    git clone https://github.com/infologicmgmt/netprobekit
+    cd netprobekit
     ```
 
 2.  **Install dependencies:**

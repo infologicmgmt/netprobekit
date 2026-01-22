@@ -5,3 +5,6 @@ alembic
 graphviz
 XlsxWriter
 vsdx
+# database
+mysqlclient
+psycopg2-binary
