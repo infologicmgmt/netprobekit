@@ -1,0 +1,9 @@
+pydantic
+sqlalchemy
+pyyaml
+pysnmp
+pysnmp-sync-adapter
+python-nmap
+Pillow
+python-dotenv
+requests

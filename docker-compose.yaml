@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  server:
+    image: ghcr.io/infologicmgmt/netprobe:latest
+    ports:
+      - "8000:8000"
+#    volumes:
+#      - .:/app
+#    command: uvicorn netprobe.server:app --host 0.0.0.0 --port 8000
+
+  agent:
+    image: ghcr.io/infologicmgmt/netprobe:latest
+#    volumes:
+#      - .:/app
+#    depends_on:
+#      - server
+    command: python -u netprobe/agent.py

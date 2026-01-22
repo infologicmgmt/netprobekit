@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netprobe"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic",
+    "sqlalchemy",
+    "pyyaml",
+    "pysnmp",
+    "pysnmp-sync-adapter",
+    "python-nmap",
+    "Pillow",
+    "python-dotenv",
+    "fastapi",
+    "uvicorn",
+    "alembic",
+    "graphviz",
+    "XlsxWriter",
+    "vsdx",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "httpx",
+]
+
+[project.scripts]
+netprobe = "netprobe.cli:cli"
+
+[tool.pytest.ini_options]
+addopts = "-p no:warnings"
+testpaths = [
+    "tests",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion = 4.0
+isolated_build = true
+envlist = py311
+
+[testenv]
+deps =
+    .[test]
+commands =
+    pytest {posargs}
+"""
